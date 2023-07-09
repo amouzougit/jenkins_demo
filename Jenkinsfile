@@ -22,12 +22,5 @@ pipeline {
                 bat 'mvn test'
             }
         }
-
-        stage('Package') {
-            steps {
-                // Archiver le package construit
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-            }
-        }
     }
 }
